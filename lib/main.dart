@@ -13,7 +13,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   MapController controller = MapController(
     initMapWithUserPosition: false,
-    initPosition: GeoPoint(latitude: 47.4358055, longitude: 8.4737324),
+    initPosition: GeoPoint(latitude: 12.9308, longitude: 77.5838,
+    ),
   );
 
 
@@ -28,22 +29,32 @@ class _HomePageState extends State<HomePage> {
         trackMyPosition: false,
         // currentLocation: false,
         road: Road(
+
           startIcon: MarkerIcon(
             icon: Icon(
               Icons.person,
               size: 64,
-              color: Colors.brown,
+              color: Colors.blue,
             ),
           ),
           roadColor: Colors.yellowAccent,
+          endIcon: MarkerIcon(
+            icon: Icon(
+              Icons.person_pin_circle,
+              color: Colors.blue,
+              size: 72,
+            ),
+          ),
         ),
         markerIcon: MarkerIcon(
           icon: Icon(
             Icons.person_pin_circle,
             color: Colors.blue,
-            size: 56,
+            size: 72,
           ),
         ),
+        defaultZoom: 60,
+        showZoomController: true,
         // initPosition: GeoPoint(latitude: 47.35387, longitude: 8.43609),
       )
     );
